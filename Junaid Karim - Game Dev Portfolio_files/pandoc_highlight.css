@@ -1,0 +1,56 @@
+pre.numberSource code {
+  counter-reset: source-line 0;
+}
+pre.numberSource code > span {
+  position: relative; left: -4em; counter-increment: source-line;
+}
+pre.numberSource code > span > a:first-child::before {
+  content: counter(source-line);
+  position: relative; left: -1em; text-align: right; vertical-align: baseline;
+  border: none; display: inline-block;
+  -webkit-touch-callout: none; -webkit-user-select: none;
+  -khtml-user-select: none; -moz-user-select: none;
+  -ms-user-select: none; user-select: none;
+  padding: 0 4px; width: 4em;
+  color: #aaaaaa;
+}
+pre.numberSource {
+  margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px;
+}
+
+@media screen {
+  code.sourceCode > span > a:first-child::before {
+    text-decoration: underline;
+  }
+}
+
+/* Syntax Highlighting */
+code span.al { color: #9e2a2b; font-weight: bold; } /* Alert - Red */
+code span.an { color: #335c67; font-weight: bold; font-style: italic; } /* Annotation - Blue */
+code span.at { color: #e09f3e; } /* Attribute - Orange */
+code span.bn { color: #e09f3e; } /* BaseN - Orange */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #335c67; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #540b0e; } /* Char */
+code span.cn { color: #540b0e; } /* Constant */
+code span.co { color: #9e2a2b; font-style: italic; } /* Comment */
+code span.cv { color: #9e2a2b; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #540b0e; font-style: italic; } /* Documentation */
+code span.dt { color: #335c67; } /* DataType */
+code span.dv { color: #e09f3e; } /* DecVal - Orange */
+code span.er { color: #9e2a2b; font-weight: bold; } /* Error - Red */
+code span.ex { } /* Extension */
+code span.fl { color: #e09f3e; } /* Float - Orange */
+code span.fu { color: #540b0e; } /* Function - Dark Red */
+code span.im { } /* Import */
+code span.in { color: #9e2a2b; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #335c67; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #335c67; } /* Other */
+code span.pp { color: #e09f3e; } /* Preprocessor - Orange */
+code span.sc { color: #540b0e; } /* SpecialChar */
+code span.ss { color: #9e2a2b; } /* SpecialString */
+code span.st { color: #540b0e; } /* String */
+code span.va { color: #335c67; } /* Variable */
+code span.vs { color: #540b0e; } /* VerbatimString */
+code span.wa { color: #9e2a2b; font-weight: bold; font-style: italic; } /* Warning */

@@ -1,0 +1,11 @@
+
+
+function load_video (thumbnail_img, video_path, attributes){
+	var embedCode = ' <video class="video" controls autoplay ' + attributes + ' src="' + video_path + '"></video>';
+	var new_div = document.createElement("div");
+	new_div.classList.add("embed-responsive", "embed-responsive-16by9")
+	new_div.innerHTML = embedCode;
+	var parent = thumbnail_img.parentElement;
+	parent.appendChild(new_div);
+	parent.removeChild(thumbnail_img);
+}

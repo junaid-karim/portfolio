@@ -1,0 +1,306 @@
+/*
+Bootstrap media queries:
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+
+/* COLORS */
+:root {
+    --dark: #540b0e;
+
+    --background-light-color: var(--light);
+    --background-dark-color: var(--dark);
+
+    --code-background-color: #fff3b0;
+
+    --contrast-background-color: #e09f3e;
+
+    --bullet-background-color: #e09f3e7b;
+    --bullet-text-color: #9e2a2b;
+
+    --text-light-color: var(--light);
+    --text-dark-color: var(--dark);
+    --link-color: #335c67;
+}
+
+.text-light {
+    --contrast-background-color: #e09f3e;
+    --bullet-background-color: #e09f3e7b;
+    --bullet-text-color: #ffffff;
+}
+
+/* MEASUREMENTS */
+:root {
+    --big-number: 200vw;
+
+    --header-skew: 10deg;
+    --header-inset: 4em;
+
+    --container-padding: 3rem;
+}
+
+@media (min-width: 992px) {
+    :root {
+        --container-padding: 6rem;
+    }
+}
+
+.bg-dark {
+    background-color: var(--background-dark-color) !important;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    position: relative;
+    background-color: var(--background-light-color);
+}
+
+.container * {
+    position: relative;
+}
+
+pre {
+    background-color: var(--code-background-color);
+    padding: 1rem;
+}
+
+a,
+a:hover {
+    color: var(--link-color);
+}
+
+gamelink{
+    color: #ffaa00;
+}
+
+#footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+#footer>div {
+    --footer-padding: 1rem;
+    padding-top: var(--footer-padding);
+    padding-bottom: var(--footer-padding);
+}
+
+body>section>.container,
+body>section>.container-fluid {
+    padding-top: var(--container-padding);
+    padding-bottom: var(--container-padding);
+}
+
+body>section {
+    background-color: var(--background-light-color);
+}
+
+body>section>.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+img#about-img {
+    --img-size: 15em;
+    object-fit: cover;
+    width: var(--img-size);
+    height: var(--img-size);
+    object-position: top;
+}
+
+@media (min-width: 768px) {
+    img#about-img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+img.img-169 {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+}
+
+h1 {
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+.container-fluid {
+    overflow: clip;
+}
+
+.project-header {
+    /*background-color:  var(--contrast-background-color);*/
+    margin-top: 30px;
+    margin-bottom: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.project-header>* {
+    z-index: 2;
+    position: relative;
+}
+
+/* background -> separate so it can be skewed independently */
+.project-header::after {
+    background-color: var(--contrast-background-color);
+    content: "";
+    position: absolute;
+    top: 0em;
+    height: 100%;
+    display: block;
+    bottom: 0em;
+    width: var(--big-number);
+}
+
+.project-header-left::after {
+    transform: skewX(calc(-1 * var(--header-skew)));
+    right: calc(-1 * var(--header-inset));
+}
+
+.project-header-right::after {
+    transform: skewX(calc(+1 * var(--header-skew)));
+    left: calc(-1 * var(--header-inset));
+}
+
+.project-header-img {
+    position: relative;
+    z-index: 1;
+}
+
+.project-bullets {
+    --x-pad: 10px;
+    --y-pad: 15px;
+
+    color: var(--bullet-text-color);
+    background: var(--bullet-background-color);
+    margin: calc(-1 * var(--x-pad)) calc(-1 * var(--y-pad));
+    padding: calc(+1 * var(--x-pad)) calc(+1 * var(--y-pad));
+}
+
+.blog-entry-card {
+    text-align: left;
+    display: flex;
+}
+
+.blog-entry-card:hover {
+    text-decoration: none;
+    /*
+    background-blend-mode: overlay;
+    background-color: transparent;
+    */
+    color: inherit !important;
+}
+
+/* gradients created with https://cssgradient.io/ */
+.blog-entry-card:hover>div>span:first-child,
+.blog-entry-card:hover>div>span:last-child {
+    color: white !important;
+}
+
+.blog-entry-card:hover .card-title {
+    color: white !important;
+}
+
+.blog-entry-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-footer {
+    background-color: var(--background-dark-color);
+}
+
+/* styles.css */
+
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.video-container {
+    width: 450px; /* Fixed width for each video container */
+    height: 200px; /* Fixed height for each video container */
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    border: 5px solid #e09f3e; /* Add border with color to each video container */
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire container without distortion */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .video-container {
+        width: calc(50% - 20px); /* Two videos per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .video-container {
+        width: calc(100% - 20px); /* One video per row */
+    }
+}
+
+/*part*/
+
+.tool-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tool-box {
+    width: 15%; /* Adjust as needed */
+    max-width: 250px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.75);
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 0px;
+    background-color: #ffffff;
+}
+
+.tool-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.tool-description {
+    font-size: 14px;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .tool-box {
+        width: 90%;
+    }
+}
+
