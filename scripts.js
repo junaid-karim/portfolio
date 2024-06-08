@@ -30,3 +30,18 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+document.addEventListener("scroll", (event) => {onscroll(event)});
+
+onscroll = (event) => {
+
+    var a = document.getElementsByClassName("navbar-nav");
+
+    console.log("value of a: ",a,event);
+
+    if(event){
+        // a.style.display = 'none';
+        
+    }
+
+};

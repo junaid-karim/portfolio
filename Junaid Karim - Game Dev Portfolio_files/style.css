@@ -39,6 +39,13 @@ Bootstrap media queries:
     --bullet-text-color: #ffffff;
 }
 
+.dog-game {
+    background-image: url(game2ss.jpg);
+    width: auto;
+    background-size: auto;
+    background-position-x: -200px;
+}
+
 /* MEASUREMENTS */
 :root {
     --big-number: 200vw;
@@ -83,7 +90,7 @@ a:hover {
     color: var(--link-color);
 }
 
-gamelink{
+gamelink {
     color: #ffaa00;
 }
 
@@ -240,30 +247,68 @@ h1 {
 }
 
 .video-container {
-    width: 450px; /* Fixed width for each video container */
-    height: 200px; /* Fixed height for each video container */
+    width: 450px;
+    /* Fixed width for each video container */
+    height: 200px;
+    /* Fixed height for each video container */
     box-sizing: border-box;
     cursor: pointer;
     position: relative;
-    border: 5px solid #e09f3e; /* Add border with color to each video container */
+    border: 5px solid #e09f3e;
+    /* Add border with color to each video container */
 }
 
 video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the video covers the entire container without distortion */
+    object-fit: cover;
+    /* Ensures the video covers the entire container without distortion */
 }
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {
     .video-container {
-        width: calc(50% - 20px); /* Two videos per row */
+        width: calc(50% - 20px);
+        /* Two videos per row */
     }
 }
 
 @media (max-width: 768px) {
     .video-container {
-        width: calc(100% - 20px); /* One video per row */
+        width: calc(100% - 20px);
+        /* One video per row */
+    }
+
+    .project-header {
+        text-align: center;
+        }
+
+    .project-header-img{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tool-container {
+    
+        text-align: center;
+    }
+
+    .row-reverse {
+    display: flex;
+        flex-wrap: wrap-reverse;
+        gap: 15px;
+    }
+
+    .row{
+        display:flex;
+        gap: 15px;
+    }
+    
+    .center-alligned {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -276,7 +321,8 @@ video {
 }
 
 .tool-box {
-    width: 15%; /* Adjust as needed */
+    width: 15%;
+    /* Adjust as needed */
     max-width: 250px;
     margin: 10px;
     border: 1px solid #ccc;
@@ -302,5 +348,20 @@ video {
     .tool-box {
         width: 90%;
     }
+
+    .dog-game {
+        background-image: url(game2ss.jpg);
+        width: auto;
+        background-position-x: center;
+        background-size: cover !important;
+    }
 }
 
+@media (min-width:768px) {
+
+    /* ::after,
+::before {
+    box-sizing: border-box
+} */
+
+}
